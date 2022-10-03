@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <title> The Umbrella Academy </title>
+            <style>
+                body {
+                    background-color: rgba(234, 197, 152, 0.621);
+                }
+                @font-face {
+                    font-family: my-font;
+                    src: url(grandegrunge.otf);
+                }
+                @font-face {
+                    font-family: my-font1;
+                    src: url(heycomic.ttf);
+                }
+                div#container {
+                    position: relative;
+                    background-color: rgba(250, 235, 215, 0.77);
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 600px;
+                    height: 755px;
+                    z-index: 50;
+                    border: 2px solid black;
+                    font-family: my-font;
+                }
+                div#one {
+                    position: absolute;
+                    background-color: red;
+                    width: 173px;
+                    height: 260px;
+                    top: 20px;
+                    left: 20px;
+                    border: 5px solid black;
+                    z-index: 100;
+                }
+                div#two {
+                    position: absolute;
+                    background-color: transparent;
+                    width: 300px;
+                    height: 97px;
+                    top: 40px;
+                    right: 60px;
+                    z-index: 100;
+                    text-align: center;
+                    font-size: 40px;
+                    transform: rotate(3deg);
+                    text-shadow: 3px 3px 0px rgba(75, 73, 73, 0.361);
+                }
+                div#three {
+                    position: absolute;
+                    background-color: rgb(166, 138, 66);
+                    width: 200px;
+                    height: 250px;
+                    top: 340px;
+                    left: 28px;
+                    z-index: 10;
+                    transform: rotate(-3deg);
+                    padding: 8px;
+                    padding-left: 10px;
+                    border-top-left-radius: 20%;
+                }
+                div#four {
+                    position: absolute;
+                    box-sizing: border-box;
+                    background-color: coral;
+                    width: 240px;
+                    height: 588px;
+                    top: 154px;
+                    right: 30px;
+                    z-index: 15;
+                    padding-left: 40px;
+                    padding-top: 20px;
+                    padding-right: 26px;
+                    transform: rotate(3deg);
+                    font-size: 15px;
+                    font-family: my-font1;
+                    border-top-left-radius: 15%;
+                    border-bottom-left-radius: 15%;
+                    overflow: scroll;
+                }
+                div#five {
+                    position: absolute;
+                    box-sizing: border-box;
+                    width: 150px;
+                    height: 150px;
+                    top: 300px;
+                    left: 210px;
+                    z-index: 20;
+                    background-image: url(dog.jpeg);
+                    background-size: cover;
+                    border-radius: 40%;
+                    background-position: -70px 2px;
+                    text-align: center;
+                    padding-top: 110px;
+                    color: aliceblue;
+                    text-shadow: 2px 2px 5px black;
+                }
+                div#six {
+                    position: fixed;
+                    box-sizing: border-box;
+                    background-color: rgba(214, 160, 88, 0.745);
+                    width: 600px;
+                    height: 50px;
+                    bottom: 0px;
+                    left: 420px;
+                    z-index: 200;
+                    border: 2px solid black;
+                    padding-left: 195.9025px;
+                }
+                span#one {
+                    font-size: 10px;
+                }
+                span#two {
+                    font-family: my-font1;
+                    float: left;
+                    margin-top: 13px;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                }
+                img#one {
+                    float: left;
+                    margin-top: 7px;
+                }
+            </style>
+            </head>
+        <body>
+            <div id="container">
+                <div id="one"> 
+                    <img src="umbrella.jpeg" alt="logo" height="260px">
+                </div>
+                <div id="two"> 
+                    The Umbrella Academy
+                 </div>
+                <div id="three">
+                    <h3> Cast <span id="one">(the main ones)</span></h3>
+                    <ul>
+                        <li>Elliot Page</li>
+                        <li>Tom Hopper</li>
+                        <li>David Castaneda</li>
+                        <li>Emmy Raver-Lampman</li>
+                        <li>Robert Sheehan</li>
+                        <li>Aidan Gallagher</li>
+                        <li>Justin H. Min</li>
+                        <li>Colm Feore</li>
+                    </ul>
+                </div>
+                <div id="four"> 
+                    On the same day in October 1989, forty-three infants are inexplicably born to random,
+                    unconnected women who showed no signs of pregnancy the day before.
+                    Seven are adopted by Sir Reginald Hargreeves, a billionaire industrialist, who creates
+                    The Umbrella Academy and prepares his "children" to save the world.
+                    But not everything went according to plan. In their teenage years, the family fractured
+                    and the team disbanded. Now almost thirty years old, the six surviving
+                    members reunite upon the news of Hargreeves' passing. Luther, Diego, Allison, Klaus, Vanya
+                    and Number Five work together to solve a mystery surrounding their father's
+                    death. But the estranged family once again begins to come apart due to their divergent personalities
+                    and abilities, not to mention the imminent threat of a global apocalypse.
+                </div>
+                <div id="five">
+                    woof-woof
+                </div>
+            </div>
+            <div id="six">
+                <img id="one" src="logoo.jpeg" alt="logo" width="30px">
+                <span id="two">Enjoy your movie!</span>
+                <img id="one" src="logoo.jpeg" alt="logo" width="30px">
+            </div>
+        </body>
+    </html>

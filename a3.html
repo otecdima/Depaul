@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+    <html lang=“en”>
+        <head>
+            <meta charset=“utf-8”>
+            <title>
+                Registration Form
+            </title>
+        </head>
+        <body bgcolor="#dedba6">
+            <h1>
+                <span style='font-size:100px;'>&#127947;</span>
+                Registration for the Sport Events
+                <span style='font-size:100px;'>&#127943;</span>
+            </h1>
+            <form>
+                <fieldset>
+                    <legend>Personal Info</legend>
+                    <!-- Name -->
+                    <label for="yourName">Your name:</label>
+                    <br>
+                    <input type="text" size="20" id="yourName" placeholder="Enter your name">
+                    <br><br>
+                    <!-- Email -->
+                    <label for="yourEmail">Your Email</label>
+                    <br>
+                    <input type="email" size="20" id="yourEmail" placeholder="example@domain.com">
+                    <br><br>
+                    <!-- Phone Number -->
+                    <label for="yourNumber">Your Number</label>
+                    <br>
+                    <input type="tel" size="20" id="yourNumber" placeholder="555-555-55-55">
+                    <br><br>
+                    <!-- Sex -->
+                    <span>Choose your sex:</span>
+                    <br>
+                    <input type="radio" name="sex" id="male" value="male">
+                    <label for="male">Male</label>
+                    <br>
+                    <input type="radio" name="sex" id="female" value="female">
+                    <label for="female">Female</label>
+                    <br>
+                    <input type="radio" name="sex" id="noAnswer" value="noAnswer">
+                    <label for="noAnswer">Don't mention</label>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Additional Info</legend>
+                    <!-- Checkbox for kind of sport -->
+                    <span>Choose kind of sport you want to attend:</span>
+                    <br>
+                    <input type="checkbox" id="derby" value="derby">
+                    <label for="derby">Derby &#127943;</label>
+                    <br>
+                    <input type="checkbox" id="swimming" value="swimming">
+                    <label for="swim">Swimming &#127946;</label>
+                    <br>
+                    <input type="checkbox" id="power" value="power">
+                    <label for="power">Powerlifting &#127947;</label>
+                    <br>
+                    <input type="checkbox" id="football" value="football">
+                    <label for="football">Football &#127944;</label>
+                    <br>
+                    <input type="checkbox" id="tennis" value="tennis">
+                    <label for="tennis">Tennis &#127934;</label>
+                    <br><br>
+                    <!-- Select fpr choosing a number of days to stay -->
+                    <label for="days">Choose the number of days to stay at the events:</label>
+                    <br>
+                    <select id="days">
+                        <option value="1">One day</option>
+                        <option value="2">Two days</option>
+                        <option value="3">Three days</option>
+                        <option value="4">Four days</option>
+                        <option value="5">Five days</option>
+                    </select>
+                    <br><br>
+                    <!-- Text Area -->
+                    <legend for="recomend">Please write down your recommendation or comments to make the events better &#128522;</legend>
+                    <textarea name="recommendation" id="recomend" cols="30" rows="5" placeholder="Recommendations or comments"></textarea>
+                </fieldset>
+                <br>
+                <input type="reset" value="Clear the form">
+                <input type="submit" value="Submit">
+            </form>
+            <br>
+        </body>
+    </html>

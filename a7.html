@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <title> 
+                Calculator 
+            </title>
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+                body {
+                    background-color:#9980eea9;
+                    font-family: 'Montserrat', sans-serif;
+                }
+                div#container {
+                    position: relative;
+                    box-sizing: border-box;
+                    margin-left: auto;
+                    margin-right: auto;
+                    background-color: white;
+                    width: 350px;
+                    height: 350px;
+                    box-shadow: 12px 12px 15px rgba(0, 0, 0, 0.3);
+                    border-radius: 10%;
+                    padding-top: 5px;
+                    top: 50px;
+                }
+                h1 {
+                    text-align: center;
+                    color: #4d12f6;
+                }
+                div#box1 {
+                    position: static;
+                    box-sizing: border-box;
+                    float: left;
+                    margin-left: 94.5px;
+                }
+                div#box2 {
+                    position: static;
+                    box-sizing: border-box;
+                    width: 25px;
+                    float: left;
+                    text-align: center;
+                }
+                div#box3 {
+                    position: static;
+                    box-sizing: border-box;
+                    float: left;
+                }
+                div#resulttt {
+                    position: absolute;
+                    box-sizing: border-box;
+                    left: 0;
+                    width: 350px;
+                    right: 0; 
+                    text-align: center;
+                    top: 141px;
+                    color: #4d12f6;
+                }
+                input#firstNumber, input#secondNumber {
+                    width: 60px;
+                    height: 30px;
+                    font-size: 20px;
+                    font-family: 'Montserrat', sans-serif;
+                    text-align: center;
+                }
+                span {
+                    font-size: 30px;
+                    font-family: 'Montserrat', sans-serif;
+                }
+                div#buttons {
+                    position: absolute;
+                    box-sizing: content-box;
+                    left: 0;
+                    width: 350px;
+                    right: 0; 
+                    text-align: center;
+                    top: 200px;
+                }
+                input[type="button"] {
+                    height: 60px;
+                    width: 60px;
+                    background-color: #ebf0f2;
+                    border-style: none;
+                    color: #4d12f6;
+                    font-size: 30px;
+                    border-radius: 50%;
+                }
+                input[type="button"]:hover {
+                    background-color: #9980eea9;
+                }
+                div#lastbuttton {
+                    position: absolute;
+                    box-sizing: content-box;
+                    left: 0;
+                    width: 350px;
+                    right: 0; 
+                    text-align: center;
+                    top: 280px;
+                }
+                input[value="Clear"] {
+                    height: 50px;
+                    width: 90px;
+                    border-radius: 15%;
+                }
+            </style>
+            <script>
+                function addNumbers() {
+                    var value1 = parseFloat(document.getElementById("firstNumber").value);
+                    var value2 = parseFloat(document.getElementById("secondNumber").value);
+                    var total = value1 + value2;
+                    document.getElementById("answer").innerHTML = total;
+                    document.getElementById("sign").innerHTML = "+";
+                }
+                function subNumbers() {
+                    var value1 = parseFloat(document.getElementById("firstNumber").value);
+                    var value2 = parseFloat(document.getElementById("secondNumber").value);
+                    var total = value1 - value2;
+                    document.getElementById("answer").innerHTML = total;
+                    document.getElementById("sign").innerHTML = "-";
+                }
+                function mulNumbers() {
+                    var value1 = parseFloat(document.getElementById("firstNumber").value);
+                    var value2 = parseFloat(document.getElementById("secondNumber").value);
+                    var total = value1 * value2;
+                    document.getElementById("answer").innerHTML = total;
+                    document.getElementById("sign").innerHTML = "x";
+                }
+                function divideNumbers() {
+                    var value1 = parseFloat(document.getElementById("firstNumber").value);
+                    var value2 = parseFloat(document.getElementById("secondNumber").value);
+                    var total = value1 / value2;
+                    document.getElementById("answer").innerHTML = total;
+                    document.getElementById("sign").innerHTML = "&divide;";
+                }
+                function clearAll() {
+                    document.getElementById("firstNumber").value = "";
+                    document.getElementById("secondNumber").value = "";
+                    document.getElementById("answer").innerHTML = "";
+                    document.getElementById("sign").innerHTML = "&nbsp;";
+                }
+            </script>
+        </head>
+        <body>
+            <div id="container">
+                <h1>
+                    Calculator
+                </h1>
+                <div id="box1">
+                    <input type="text" size="5" id="firstNumber">
+                </div>
+                <div id="box2">
+                    <span id="sign">
+                        &nbsp;
+                    </span>
+                </div>
+                <div id="box3">
+                    <input type="text" size="5" id="secondNumber">
+                </div>
+                <div id="resulttt">
+                    <span id="answer"></span>
+                </div>
+                <div id="buttons">
+                    <input type="button" value="+" onclick="addNumbers();">
+                    <input type="button" value="-" onclick="subNumbers();">
+                    <input type="button" value="x" onclick="mulNumbers();">
+                    <input type="button" value="&divide" onclick="divideNumbers();">
+                </div>
+                <div id="lastbuttton">
+                    <input type="button" value="Clear" onclick="clearAll()">
+                </div>
+            </div>
+        </body>
+    </html>

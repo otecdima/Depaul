@@ -1,0 +1,359 @@
+body {
+    font-family: my-font;
+}
+
+div#container {
+    position: static;
+    box-sizing: border-box;
+    width: 1300px;
+    border-style: solid;
+    margin-right: auto;
+    margin-left: auto;
+    border-color: #015450;
+    border-radius: 20px;
+    border-width: 5px;
+    background-color: white;
+}
+
+header {
+    text-align: center;
+    color: #015450;
+}
+
+h1 {
+    margin-bottom: 17px;
+    font-size: 80px;
+}
+
+hr {
+    background-color: #015450;
+    height: 2px;
+    border-radius: 5px;
+}
+
+nav {
+    text-align: center;
+    padding-top: 10px;
+    word-spacing: 10px;
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+
+nav a:link {
+    font-family: my-font;
+    color: #015450;
+    text-decoration: none;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+nav a:visited {
+    font-family: my-font;
+    color: #0f2d43;
+    text-decoration: none;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+nav a:hover {
+    font-family: my-font;
+    color: white;
+    box-shadow: inset 120px 0 0 0 #015450;;
+}
+
+nav a:active {
+    font-family: my-font;
+    color: rgba(61, 153, 145, 0.612);
+    box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.347);
+    
+}
+
+div#welcome {
+    position: static;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+    height: 200px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+p#welcome_ {
+    color: #015450;
+    font-size: 40px;
+    text-shadow: 3px 3px 10px #0f2d43;
+    letter-spacing: .6rem;
+}
+
+div#picture {
+    text-align: center;
+}
+
+div#about {
+    background-color: #3a7e77;
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+    height: 300px;
+    padding-top: 20px;
+    padding-left: 170px;
+    padding-right: 170px;
+    font-size: 20px;
+    margin-top: -6px;
+}
+
+div#about h2 {
+    margin-top: 0px;
+}
+
+footer {
+    box-sizing: border-box;
+    padding-top: 10px;
+    height: 110px;
+    text-align: center;
+    color: #015450;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    clear: both;
+}
+
+span#sign {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3#foot {
+    margin-top: 0px;
+    margin-bottom: 7px;
+}
+
+footer a {
+    color: inherit;
+    text-decoration: none;
+    background:
+      linear-gradient(
+        to right,
+        rgba(100, 200, 200, 1),
+        rgba(100, 200, 200, 1)
+      ),
+      linear-gradient(
+        to right,
+        rgba(255, 0, 0, 1),
+        rgba(255, 0, 180, 1),
+        rgba(0, 100, 200, 1)
+    );
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+}
+  
+footer a:hover {
+    background-size: 0 3px, 100% 3px;
+}
+
+footer p {
+    margin-top: 12px;
+}
+
+div#aboutus {
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+    color: #015450;
+    text-align: center;
+    height: 380px;
+    padding-top: 40px;
+    padding-left: 170px;
+    padding-right: 170px;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+div#contacts {
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+    color: #015450;
+    text-align: center;
+    height: 200px;
+    padding-top: 23px;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+div#contacts h2 {
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+div#map img {
+    margin-left: 90px;
+}
+
+div#map {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+div#address {
+    position: absolute;
+    right: 30px;
+    top: 146.875px;
+    text-align: center;
+    right: 138.915px;
+}
+
+p#address_ {
+    color: #015450;
+    font-size: 30px;
+}
+
+@font-face {
+    font-family: my-font;
+    src: url(Shandora\ DEMO.ttf);
+}
+
+div#image1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+div#image1 img {
+    border-radius: 30px;
+}
+
+div#image_ {
+    text-align: center;
+}
+
+div#box1, div#box2, div#box3 {
+    position: static;
+    float: left;
+    width: 430px;
+    text-align: center;
+    color: #f7f7f7;
+    margin-top: 20px;
+    background-color: #3a7e77;
+    padding-top: 15px;
+    height: 233px;
+}
+
+div#box1 span, div#box2 span, div#box3 span {
+    font-size: 50px;
+}
+
+div#box1 p, div#box2 p, div#box3 p {
+    font-size: 27px;
+}
+
+div#title {
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+    color: #015450;
+    text-align: center;
+    height: 150px;
+    padding-top: 35px;
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+
+div#title h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+div#joincontainer {
+    position: relative;
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+    color: #015450;
+    text-align: center;
+    height: 600px;
+    padding-top: 35px;
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+
+div#joinimage {
+    position: absolute;
+    box-sizing: border-box;
+    top: 0px;
+    left: 40px;
+}
+
+div#joinform {
+    position: absolute;
+    box-sizing: border-box;
+    text-align: center;
+    right: 125px;
+}
+
+div#joinform h2, p {
+    margin-bottom: 0px;
+    margin-top: 0p;
+}
+
+div#form {
+    height: 240px;
+    width: 600px;
+}
+
+div#form div{
+    height: 50px;
+    width: 230px;
+    margin-top: 20px;
+}
+
+.first {
+    float: left;
+    margin-left: 60px;
+}
+
+.second {
+    float: right;
+    margin-right: 60px;
+}
+
+div#form input {
+    position: relative;
+    height: 50px;
+    width: 230px;
+    top: 0px;
+    font-size: 20px;
+    color: #015450;
+    border: 3px solid #f7f7f7;
+    padding-left: 10px; 
+    box-shadow: inner 0 0 4px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;    
+}
+
+div#form input:focus { 
+    outline: none !important;
+    box-shadow: 0 0 10px #015450;
+}
+
+div#form ::placeholder {
+    color: #015450;
+}
+
+div#button1 {
+    position: absolute;
+    right: 170px;
+    top: 385px;
+    text-align: center;
+}
+
+div#button1 input {
+    font-size: 20px;
+    color: #f7f7f7;
+    height: 50px;
+    width: 243px;
+    text-align: center;
+    padding-left: 10px; 
+    border-radius: 3px;
+    background-color: #015450;    
+}
+
+div#button1 input:hover { 
+    background-color: #f7f7f7;
+    color: #015450;
+}

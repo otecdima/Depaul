@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <title>
+                Ordering
+            </title>
+            <style>
+                body {
+                    background-color: #b7b8b690;
+                }
+                div#container {
+                    position: relative;
+                    box-sizing: border-box;
+                    margin-left: auto;
+                    margin-right: auto;
+                    background-color: white;
+                    width: 390px;
+                    height: 490px;
+                    border-radius: 5%;
+                    top: 50px;
+                    border-style: dashed;
+                    border-width: 5px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    padding-bottom: 10px;
+                    background-color: #c0d7a8;
+                }
+                div#box {
+                    text-align: center;
+                }
+                div#boxx {
+                    text-align: center;
+                }
+                input#buttonn {
+                    font-size: 15px;
+                }
+            </style>
+            <script>
+                function calculateTotal() {
+                    document.getElementById("size").style.color = "";
+                    document.getElementById("deliveryvariationn").style.color = "";
+                    document.getElementById("thesum").innerHTML = "";
+                    var total = new Number;
+                    // checking for size and delifery
+                    if (document.getElementById("n-size").selected && (!document.getElementById("pickup").checked && !document.getElementById("delivery").checked)) {
+                        alert("Please select a Size and Pick-Up or Delivery");
+                        document.getElementById("size").style.color = "red";
+                        document.getElementById("deliveryvariationn").style.color = "red";
+                        exit()
+                    }
+                    // adding size
+                    var list_ = document.getElementById("size");
+	                var col_ = list_.getElementsByTagName('option');
+
+                    for (i = 0; i < col_.length; i++) {
+                        if (col_[i].tagName == 'OPTION') {
+                            if (col_[i].id == "n-size" && col_[i].selected) {
+                                alert("Please select a size.");
+                                document.getElementById("size").style.color = "red";
+                                exit();
+                            }
+                            else if (col_[i].selected && col_[i].id != "n-size") {
+                                total += parseFloat(col_[i].value);
+                                break;
+                            }
+                        }
+                    }
+                    // addind toppings
+                    var ctrl1 = document.getElementById("toppings");
+	                var col = ctrl1.getElementsByTagName('input');
+
+                    for (i = 0; i < col.length; i++) {
+                        if (col[i].tagName == 'INPUT') {
+                            if(col[i].checked) {
+                                total += parseFloat(col[i].value);
+                            }
+                        }
+                    }
+                    // tax
+                    total += total * (11.25/100)
+                    // adding delivery
+                    if (!document.getElementById("pickup").checked && !document.getElementById("delivery").checked) {
+                        alert("Please select Pick-Up or Delivery");
+                        document.getElementById("deliveryvariationn").style.color = "red";
+                        exit();
+                    }
+                    else if (document.getElementById("delivery").checked) {
+                        total += parseFloat(document.getElementById("delivery").value);
+                    }
+                    document.getElementById("thesum").innerHTML = "Your total cost is: $" + total.toFixed(2);
+                }
+            </script>
+        </head>
+        <body>
+            <div id="container">
+                <div id="boxx">
+                    <h1>Order a Pizza</h1>
+                </div>
+                <p id="size">
+                    What Size Do You Want:
+                    <select name="size">
+                        <option value="0" id="n-size"></option>
+                        <option value="10.00" id="small">
+                            SMALL - $10.00
+                        </option>
+                        <option value="12.50" id="medium">
+                            MEDIUM - $12.50
+                        </option>
+                        <option value="15.00" id="large">
+                            LARGE - $15.00
+                        </option>
+                    </select>
+                </p>
+                <p id="toppings">
+                    What Toppings Do You Want?
+                    <br>
+                    <input type="checkbox" id="extracheese" value="2.00">
+                    <label for="extracheese">Extra Cheese (add $2.00)</label>
+                    <br>
+                    <input type="checkbox" id="peperoni" value="3.00">
+                    <label for="peperoni">Pepperoni (add $3.00)</label>
+                    <br>
+                    <input type="checkbox" id="muchrooms" value="1.50">
+                    <label for="muchrooms">Mushrooms (add $1.50)</label>
+                    <br>
+                    <input type="checkbox" id="sausage" value="2.40">
+                    <label for="sausage">Sausage (add $2.40)</label>
+                    <br>
+                    <input type="checkbox" id="tomato" value="1.00">
+                    <label for="tomato">Tomato (add $1.00)</label>
+                    <br>
+                    <input type="checkbox" id="blackolives" value="1.90">
+                    <label for="blackolives">Black olives (add $1.90)</label>
+                </p>
+                <p id="deliveryvariationn">
+                    Pick-Up or Delivery?
+                    <br>
+                    <input type="radio" name="deliveryvariation" id="pickup" value="0.00">
+                    <label for="pickup">Pick-Up</label>
+                    <br>
+                    <input type="radio" name="deliveryvariation" id="delivery" value="3.00">
+                    <label for="delivery">Delivery (add $3.00)</label>
+                </p>
+                <p>
+                    NOTE: 11.25% sales tax will be added to the cost of your pizza.
+                </p>
+                <div id="box">
+                    <input type="button" id="buttonn" value="Calculate Order Total" onclick="calculateTotal();">
+                </div>
+                <p id="thesum"></p>
+            </div>
+        </body>
+    </html>
